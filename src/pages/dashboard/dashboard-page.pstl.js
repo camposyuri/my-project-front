@@ -1,5 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 
+const drawerWidth = 240;
+
 export default makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -22,8 +24,8 @@ export default makeStyles((theme) => ({
     }),
   },
   appBarShift: {
-    marginLeft: 240,
-    width: `calc(100% - 240px)`,
+    marginLeft: drawerWidth,
+    width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -41,7 +43,7 @@ export default makeStyles((theme) => ({
   drawerPaper: {
     position: "relative",
     whiteSpace: "nowrap",
-    width: 240,
+    width: drawerWidth,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
